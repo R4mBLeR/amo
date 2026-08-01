@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3091;
 app.use(express.urlencoded({ extended: true }));
 app.post("/send_message", (req, res) => {
-  console.log(req.leads.add);
+  console.log(req.body.leads.add);
   //    const amoDomain = this.configService.get<string>('AMO_DOMAIN');
   //     const headers = {
   //       Authorization: `Bearer ${this.configService.get<string>('AMO_TOKEN')}`,
