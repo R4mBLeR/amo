@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = 3091;
-
+app.use(express.urlencoded({ extended: true }));
 app.post("/send_message", (req, res) => {
   console.log(req.body);
   //    const amoDomain = this.configService.get<string>('AMO_DOMAIN');
