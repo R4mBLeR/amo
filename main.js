@@ -1,0 +1,23 @@
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+app.post("/send_message", (req, res) => {
+  console.log(req.body);
+  //    const amoDomain = this.configService.get<string>('AMO_DOMAIN');
+  //     const headers = {
+  //       Authorization: `Bearer ${this.configService.get<string>('AMO_TOKEN')}`,
+  //       'Content-Type': 'application/json',
+  //     };
+  //     const response = await axios.get(
+  //       `https://${amoDomain}/api/v4/leads/${id}`,
+  //       { headers },
+  //     );
+  //     if (response.status === 200 && response.data) {
+  //       return { success: true, data: response.data };
+  //     }
+});
+
+app.listen(PORT, () => {
+  console.log(`Express server running at http://localhost:${PORT}/`);
+});
