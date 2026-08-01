@@ -4,7 +4,7 @@ require("dotenv").config();
 const app = express();
 const PORT = 3091;
 app.use(express.urlencoded({ extended: true }));
-app.get("/send_message", async (req, res) => {
+app.post("/send_message", async (req, res) => {
   const leadId = req.body.leads.add[0].id;
   const amoDomain = process.env.AMO_DOMAIN;
   //const leadId = 43537739;
