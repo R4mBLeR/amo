@@ -13,7 +13,7 @@ app.get("/send_message", async (req, res) => {
     Authorization: `Bearer ${amoToken}`,
     "Content-Type": "application/json",
   };
-
+  console.log(leadId);
   try {
     let response = await axios.get(
       `https://${amoDomain}/api/v4/leads/${leadId}`,
@@ -27,7 +27,7 @@ app.get("/send_message", async (req, res) => {
         },
       },
     );
-
+    console.log(response.data);
     const elements = response.data._embedded.catalog_elements;
     const element = elements.at(-1);
     const elementId = element.id;
